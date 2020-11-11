@@ -41,3 +41,7 @@ button {
     height: 30px;
     margin-top: 10px;
 }
+
+.fa-trash-alt {
+    cursor: pointer;
+}
