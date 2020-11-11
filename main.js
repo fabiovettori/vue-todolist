@@ -8,9 +8,12 @@ var app = new Vue ({
     el: '#root',
     data: {
         list: ['mangiare', 'bere', 'dormire'],
+        userInput: ''
     },
     methods: {
-
+        add: function (){
+            this.list.push(this.userInput);
+        }
     }
 
 });
