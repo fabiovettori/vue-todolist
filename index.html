@@ -31,13 +31,17 @@
                             <span>{{ list[i] }}</span>
                             <span @click="remove(i)" class="fas fa-trash-alt"></span>
                         </li>
-
                     </ul>
+
                     <div>
                         <h2>Add a new todo..</h2>
                         <span @click="add()" class="fas fa-arrow-alt-circle-right"></span>
+
+                        <div class="tooltip" :class="tipActive">
+                            <p>{{ tipMessage }}</p>
+                        </div>
                     </div>
-                    <input type="text" v-model="userInput" v-on:keyup.13="add()">
+                    <input type="text" v-model="userInput" v-on:keyup.13="add()" :class="inputDanger">
                 </div>
             </section>
         </main>

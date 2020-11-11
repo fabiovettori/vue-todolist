@@ -17,6 +17,10 @@ section {
     align-items: center;
 }
 
+#root {
+    position: relative;
+}
+
 h1 {
     font-size: 50px;
     margin-bottom: 20px;
@@ -38,13 +42,17 @@ li {
     list-style-type: none;
     font-size: 25px;
     font-weight: 500;
-    text-transform: capitalize;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     background-color: #423e6e;
     margin-bottom: 2px;
+}
+
+li span::first-letter {
+    display: block;
+    text-transform: uppercase;
 }
 
 li:first-child {
@@ -69,6 +77,10 @@ input {
 
 input:focus {
     outline: 2px solid #263d7a;
+}
+
+input.active:focus {
+    outline: 2px solid red;
 }
 
 button {
@@ -97,4 +109,30 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.tooltip {
+    background-color: rgba(66, 62, 110, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -40px;
+    left: 10px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    display: flex;
+    align-items: center;
+}
+
+.tooltip.active {
+    opacity: 1;
+}
+
+.tooltip:before {
+    content: ' ';
+    height: 20px;
+    position: absolute;
+    display: inline-block;
+    border-right: 3px solid red;
+    left: -8px;
 }

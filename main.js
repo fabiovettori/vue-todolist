@@ -8,12 +8,28 @@ var app = new Vue ({
     el: '#root',
     data: {
         list: ['mangiare', 'bere', 'dormire'],
-        userInput: ''
+        userInput: '',
+        tipActive: '',
+        tipMessage: '',
+        inputDanger: ''
     },
     methods: {
-        add: function (){
-            this.list.push(this.userInput);
-            this.userInput = '';
+        add: function (i){
+            if (this.userInput != '' && !this.list.includes(this.userInput)) {
+                this.list.push(this.userInput);
+                this.userInput = '';
+                this.tipActive = '';
+                this.inputDanger = '';
+            } else if (this.userInput == ''){
+                this.tipActive = 'active';
+                this.tipMessage = 'character not allowed';
+            } else {
+                this.tipActive = 'active';
+                this.tipMessage = 'this todo already exist',
+                this.inputDanger = 'active';
+                this.userInput = '';
+
+            };
         },
         remove: function (i){
             // console.log('item removed');
