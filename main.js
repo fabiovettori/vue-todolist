@@ -17,7 +17,7 @@ var app = new Vue ({
         remove: function (i){
             // console.log('item removed');
             // console.log(this.list[i]);
-            this.list[i].splice(i,1);
+            this.list.splice(i,1);
         }
     }
 
