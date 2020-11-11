@@ -25,7 +25,7 @@
             <section>
                 <!-- Vue container -->
                 <div id="root">
-                    <h1>Vue TodoList</h1>
+                    <h1>Todo List</h1>
                     <ul>
                         <li v-for="(item, i) in list">
                             <span>{{ list[i] }}</span>
@@ -33,8 +33,11 @@
                         </li>
 
                     </ul>
+                    <div>
+                        <h2>Add a new todo..</h2>
+                        <span @click="add()" class="fas fa-arrow-alt-circle-right"></span>
+                    </div>
                     <input type="text" v-model="userInput" v-on:keyup.13="add()">
-                    <button @click="add()">Add item</button>
                 </div>
             </section>
         </main>

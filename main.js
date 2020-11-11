@@ -13,6 +13,7 @@ var app = new Vue ({
     methods: {
         add: function (){
             this.list.push(this.userInput);
+            this.userInput = '';
         },
         remove: function (i){
             // console.log('item removed');
