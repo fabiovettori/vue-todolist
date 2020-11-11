@@ -7,3 +7,24 @@
 body {
     font-family: 'Lato', sans-serif;
 }
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 5px 0;
+
+}
+
+#root {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+}

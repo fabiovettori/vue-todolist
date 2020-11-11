@@ -5,9 +5,9 @@
 // BONUS: intercettare anche il tasto "ENTER" per aggiungere un nuovo todo
 
 var app = new Vue ({
-    li: '#root',
+    el: '#root',
     data: {
-
+        list: ['mangiare', 'bere', 'dormire'],
     },
     methods: {
 

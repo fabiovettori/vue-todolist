@@ -18,13 +18,18 @@
     </head>
     <body>
 
-        <!-- Vue container -->
-        <div id="root">
-
-        </div>
-
+        <main>
+            <section>
+                <!-- Vue container -->
+                <div id="root">
+                    <ul>
+                        <li v-for="(item, i) in list"> {{ list[i]}}</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
 
         <!-- Js -->
-        <link rel="stylesheet" href="main.js">
+        <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
